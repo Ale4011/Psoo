@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// Estrutura para representar um estudante
+struct Estudante {
+    char nome[50];
+    char ra[10];
+};
+
+// Função para apresentar as informações do estudante
+void apresentarEstudante(struct Estudante estudante) {
+    printf("Nome: %s, RA: %s\n", estudante.nome, estudante.ra);
+}
+
+int main() {
+    // Criando um estudante com nome "Alex Gonçalves Varza" e RA "G09FHD6"
+    struct Estudante estudante;
+    strcpy(estudante.nome, "Alex Gonçalves Varza");
+    strcpy(estudante.ra, "G09FHD6");
+
+    // Apresentando o estudante
+    apresentarEstudante(estudante);
+
+    return 0;
+}
